@@ -1,0 +1,99 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    string receptorNombre = Request["receptorNombre"];
+}
+
+<div class="mensaje-container d-flex justify-content-center align-items-center vh-100">
+    <div class="mensaje-form p-5 shadow-lg rounded" style="background-color: #f8f9fa; max-width: 500px; width: 100%;">
+        <div class="text-center mb-4">
+            <img src="https://raw.githubusercontent.com/PokeAPI/media/master/logo/pokeapi_256.png" alt="PokemonGame" style="height: 80px;" />
+            <h2 class="mt-2" style="color: #2A75BB; font-family: 'Press Start 2P', cursive;">Enviar Mensaje</h2>
+        </div>
+        @using (Html.BeginForm("Create", "Mensajes", FormMethod.Post))
+        {
+            <div class="form-group mb-4">
+                <label for="receptorNombre" class="control-label">Receptor Nombre</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text bg-warning text-white">
+                            <i class="fas fa-user-tag"></i>
+                        </span>
+                    </div>
+                    <input class="form-control" name="receptorNombre" value="@receptorNombre" readonly />
+                </div>
+            </div>
+            <div class="form-group mb-4">
+                <label for="contenido" class="control-label">Contenido</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text bg-warning text-white">
+                            <i class="fas fa-envelope"></i>
+                        </span>
+                    </div>
+                    <textarea class="form-control" name="contenido" placeholder="Escribe tu mensaje aquí..." rows="5"></textarea>
+                </div>
+            </div>
+            <div class="d-flex justify-content-between">
+                <button type="submit" class="btn btn-warning text-white font-weight-bold">
+                    <i class="fas fa-paper-plane"></i> Enviar
+                </button>
+                <a class="btn btn-secondary" href="@Url.Action("Index", "Mensajes")">
+                    <i class="fas fa-times"></i> Cancelar
+                </a>
+            </div>
+        }
+    </div>
+</div>
+
+<style>
+    .mensaje-container {
+        background-color: #f0f0f0;
+        padding: 20px;
+    }
+
+    .mensaje-form {
+        border: 2px solid #2A75BB;
+    }
+
+    .input-group-text {
+        border: none;
+    }
+
+    .btn-warning {
+        background-color: #FFCB05;
+        border-color: #FFCB05;
+    }
+
+        .btn-warning:hover {
+            background-color: #e0b700;
+            border-color: #e0b700;
+        }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .control-label {
+        font-weight: bold;
+    }
+
+    .btn {
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+    }
+
+    .img-fluid {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .form-group {
+        margin-bottom: 1.5rem;
+    }
+
+    .d-flex.justify-content-between {
+        gap: 1rem;
+    }
+</style>
+
+

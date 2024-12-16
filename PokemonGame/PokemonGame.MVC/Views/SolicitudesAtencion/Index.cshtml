@@ -1,0 +1,32 @@
+﻿@using PokemonGame.Data.Model
+@model IEnumerable<SolicitudesAtencion>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Solicitudes Pendientes</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>UsuarioId</th>
+            <th>PokemonId</th>
+            <th>FechaSolicitud</th>
+            <th>Estado</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var s in Model)
+        {
+            <tr>
+                <td>@s.UsuarioId</td>
+                <td>@s.PokemonId</td>
+                <td>@s.FechaSolicitud</td>
+                <td>@s.Estado</td>
+                <td>
+                    <a class="btn btn-primary btn-sm" href="@Url.Action("Atender", new{id=s.SolicitudId})">Atender</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

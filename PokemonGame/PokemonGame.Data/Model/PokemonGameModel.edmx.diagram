@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="91706a787ff6457e9cff5476e79aa492" Name="Diagram1">
+        <EntityTypeShape EntityType="PokemonGameDBModel.EntrenadoresPokemone" Width="1.5" PointX="3" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="PokemonGameDBModel.Mensaje" Width="1.5" PointX="3" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PokemonGameDBModel.Pokedex" Width="1.5" PointX="5.75" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="PokemonGameDBModel.Pokemone" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PokemonGameDBModel.SolicitudesAtencion" Width="1.5" PointX="6" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PokemonGameDBModel.Usuario" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
+        <AssociationConnector Association="PokemonGameDBModel.FK__Entrenado__Pokem__70DDC3D8" ManuallyRouted="false" />
+        <AssociationConnector Association="PokemonGameDBModel.FK__Entrenado__Usuar__6FE99F9F" ManuallyRouted="false" />
+        <AssociationConnector Association="PokemonGameDBModel.FK__Mensajes__Emisor__534D60F1" ManuallyRouted="false" />
+        <AssociationConnector Association="PokemonGameDBModel.FK__Mensajes__Recept__5441852A" ManuallyRouted="false" />
+        <AssociationConnector Association="PokemonGameDBModel.FK__Solicitud__Pokem__5CD6CB2B" ManuallyRouted="false" />
+        <AssociationConnector Association="PokemonGameDBModel.FK__Solicitud__Usuar__5BE2A6F2" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

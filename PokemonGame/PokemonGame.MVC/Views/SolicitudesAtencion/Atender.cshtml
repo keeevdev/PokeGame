@@ -1,0 +1,17 @@
+﻿@using PokemonGame.Data.Model
+@model SolicitudesAtencion
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Atender Solicitud</h2>
+<p>Usuario: @Model.UsuarioId</p>
+<p>Pokemon: @Model.PokemonId</p>
+<p>Estado Actual: @Model.Estado</p>
+@using (Html.BeginForm("Atender", "SolicitudesAtencion", FormMethod.Post))
+{
+    @Html.HiddenFor(m => m.SolicitudId)
+    <button class="btn btn-success">Marcar como Atendida</button>
+    <a class="btn btn-secondary" href="@Url.Action("Index")">Cancelar</a>
+}
+

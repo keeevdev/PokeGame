@@ -1,0 +1,97 @@
+﻿@using PokemonGame.Data.Model
+@model Usuario
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="delete-user-container container my-5">
+    <div class="delete-user-card p-5 shadow-lg rounded bg-light">
+        <div class="text-center mb-4">
+            <img src="https://raw.githubusercontent.com/PokeAPI/media/master/logo/pokeapi_256.png" alt="PokemonGame" style="height: 80px;" />
+            <h2 class="mt-2 text-danger" style="font-family: 'Press Start 2P', cursive;">Eliminar Usuario</h2>
+        </div>
+
+        <p class="text-center lead">¿Desea eliminar al usuario <strong>'@Model.NombreUsuario'</strong>?</p>
+
+        @using (Html.BeginForm("Delete", "Users", FormMethod.Post, new { @class = "text-center" }))
+        {
+            @Html.HiddenFor(m => m.UsuarioId)
+
+            <div class="d-flex justify-content-center mt-4">
+                <button type="submit" class="btn btn-danger mr-3">
+                    <i class="fas fa-trash-alt"></i> Eliminar
+                </button>
+                <a class="btn btn-secondary" href="@Url.Action("Index")">
+                    <i class="fas fa-times-circle"></i> Cancelar
+                </a>
+            </div>
+        }
+    </div>
+</div>
+
+<style>
+    .delete-user-container {
+        background-color: #f0f0f0;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .delete-user-card {
+        border: 2px solid #dc3545;
+    }
+
+    .btn-danger {
+        background-color: #dc3545;
+        border-color: #dc3545;
+        font-family: 'Press Start 2P', cursive;
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+
+    .btn-danger:hover {
+        background-color: #c82333;
+        border-color: #bd2130;
+    }
+
+    .btn-secondary {
+        background-color: #6c757d;
+        border-color: #6c757d;
+        font-family: 'Press Start 2P', cursive;
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+
+    .btn-secondary:hover {
+        background-color: #5a6268;
+        border-color: #545b62;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .lead {
+        font-size: 1.25rem;
+    }
+
+    @@media (max-width: 576px) {
+        .delete-user-card {
+            padding: 2rem;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+        }
+
+        .btn-danger, .btn-secondary {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        .d-flex.justify-content-center.mt-4 {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+</style>

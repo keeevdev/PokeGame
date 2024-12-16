@@ -1,0 +1,83 @@
+﻿@model PokemonFame.MVC.Models.BattleViewModel
+
+<div class="battle-end-container container my-5">
+    <h2 class="text-center mb-5" style="color: #2A75BB; font-family: 'Press Start 2P', cursive;">¡La Batalla Ha Terminado!</h2>
+
+    <div class="row justify-content-center">
+        <div class="col-md-5 mb-4">
+            <div class="card text-center shadow-lg">
+                <div class="card-header bg-success text-white">
+                    <h3>Ganador</h3>
+                </div>
+                <div class="card-body">
+                    <img src="@((Model.Player1.Hp > 0) ? Model.Player1.SpriteUrl : Model.Player2.SpriteUrl)"
+                         alt="Ganador"
+                         class="img-fluid rounded mb-3"
+                         style="height: 150px;">
+                    <h4>@((Model.Player1.Hp > 0) ? Model.Player1.Name : Model.Player2.Name)</h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-5 mb-4">
+            <div class="card text-center shadow-lg">
+                <div class="card-header bg-danger text-white">
+                    <h4>Derrotado</h4>
+                </div>
+                <div class="card-body">
+                    <img src="@((Model.Player1.Hp > 0) ? Model.Player2.SpriteUrl : Model.Player1.SpriteUrl)"
+                         alt="Derrotado"
+                         class="img-fluid rounded mb-3"
+                         style="height: 150px;">
+                    <h5>@((Model.Player1.Hp > 0) ? Model.Player2.Name : Model.Player1.Name)</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center">
+        <a href="/Battle/Index" class="btn btn-warning btn-lg mt-4">
+            <i class="fas fa-redo-alt"></i> Jugar Otra Vez
+        </a>
+    </div>
+</div>
+
+<style>
+    .battle-end-container {
+        background-color: #f8f9fa;
+        padding: 40px;
+        border-radius: 10px;
+    }
+
+    .card-header h3, .card-header h4 {
+        margin: 0;
+    }
+
+    .btn-warning {
+        background-color: #FFCB05;
+        border-color: #FFCB05;
+        font-family: 'Press Start 2P', cursive;
+        font-size: 1.2rem;
+    }
+
+    .btn-warning:hover {
+        background-color: #e0b700;
+        border-color: #e0b700;
+    }
+
+    .img-fluid {
+        max-height: 150px;
+        object-fit: contain;
+    }
+
+    @@media (max-width: 768px) {
+        .battle-end-container {
+            padding: 20px;
+        }
+
+        .btn-warning {
+            font-size: 1rem;
+            padding: 0.75rem 1.5rem;
+        }
+    }
+</style>

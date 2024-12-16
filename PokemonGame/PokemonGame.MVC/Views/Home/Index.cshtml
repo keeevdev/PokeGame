@@ -1,0 +1,185 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-5">
+    <div class="jumbotron text-center bg-primary text-white py-5 rounded">
+        <h1 class="display-4">¡Bienvenido a PokémonGame!</h1>
+        <p class="lead">Embárcate en una aventura épica, captura Pokémon, entrena a tu equipo y conviértete en el Maestro Pokémon.</p>
+        <a href="@Url.Action("Register", "Account")" class="btn btn-lg btn-warning mt-3">
+            <i class="fas fa-play"></i> Comienza tu Aventura
+        </a>
+    </div>
+
+    <div class="row text-center my-5">
+        <div class="col-md-4 mb-4">
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png" alt="Captura Pokémon" class="img-fluid mb-3" style="width: 100px;">
+            <h3>Captura Pokémon</h3>
+            <p>Encuentra y captura una variedad de Pokémon en diferentes hábitats.</p>
+        </div>
+        <div class="col-md-4 mb-4">
+            <img src="https://cdn-icons-png.flaticon.com/512/1077/1077035.png" alt="Entrena a tu Equipo" class="img-fluid mb-3" style="width: 100px;">
+            <h3>Entrena a tu Equipo</h3>
+            <p>Mejora las habilidades de tus Pokémon para enfrentarte a desafíos más grandes.</p>
+        </div>
+        <div class="col-md-4 mb-4">
+            <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" alt="Compite con Otros" class="img-fluid mb-3" style="width: 100px;">
+            <h3>Compite con Otros</h3>
+            <p>Desafía a otros entrenadores en emocionantes batallas Pokémon.</p>
+        </div>
+    </div>
+
+    <div class="my-5">
+        <h2 class="text-center mb-4">Últimas Noticias</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">Nueva Actualización Disponible</h5>
+                        <p class="card-text">Descubre las nuevas características y mejoras en la última actualización de PokémonGame.</p>
+                        <a href="#" class="btn btn-primary">Leer Más</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">Evento Especial de Verano</h5>
+                        <p class="card-text">Participa en nuestro evento de verano y gana recompensas exclusivas.</p>
+                        <a href="#" class="btn btn-primary">Participar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bg-light py-5">
+        <h2 class="text-center mb-4">Lo que Dicen Nuestros Entrenadores</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <blockquote class="blockquote text-center">
+                    <p class="mb-4">"PokémonGame ha sido una experiencia increíble. Me encanta poder capturar y entrenar."</p>
+                    <footer class="blockquote-footer">Francisco Soto</footer>
+                </blockquote>
+            </div>
+            <div class="col-md-4 mb-4">
+                <blockquote class="blockquote text-center">
+                    <p class="mb-4">"Las actualizaciones constantes y los eventos especiales mantienen el juego fresco y emocionante."</p>
+                    <footer class="blockquote-footer">Mariana Salazar</footer>
+                </blockquote>
+            </div>
+            <div class="col-md-4 mb-4">
+                <blockquote class="blockquote text-center">
+                    <p class="mb-4">"La comunidad de PokémonGame es fantástica. Siempre hay alguien con quien compartir estrategias y batallas."</p>
+                    <footer class="blockquote-footer">Fran Porras</footer>
+                </blockquote>
+            </div>
+        </div>
+    </div>
+    <div class="text-center my-5">
+        <h2>¿Listo para Convertirte en el Próximo Maestro Pokémon?</h2>
+        <a href="@Url.Action("Register", "Account")" class="btn btn-success btn-lg mt-3">
+            <i class="fas fa-user-plus"></i> Regístrate Ahora
+        </a>
+    </div>
+</div>
+
+<style>
+    .jumbotron {
+        background-image: url('https://lh3.googleusercontent.com/NWt2_K0Emlkxc4FyJ8nBsjXNm77iLepA8yfsSbB65M41nacP8dKZBYBcrVo-vnz37H-MIS815AtMJn7KJDPfMImKq8wNiFr4CgvJMOve_uGp4g=e365-w1024');
+        background-size: cover;
+        background-position: center;
+        color: white;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .jumbotron::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(42, 117, 187, 0.6);
+    }
+
+    .jumbotron h1,
+    .jumbotron p,
+    .jumbotron a {
+        position: relative;
+        z-index: 1;
+    }
+
+    .btn-warning {
+        background-color: #FFCB05;
+        border-color: #FFCB05;
+        font-family: 'Press Start 2P', cursive;
+        font-size: 1rem;
+        transition: background-color 0.3s, border-color 0.3s;
+    }
+
+    .btn-warning:hover {
+        background-color: #e0b700;
+        border-color: #e0b700;
+    }
+
+    .btn-success {
+        font-family: 'Press Start 2P', cursive;
+        font-size: 1rem;
+        transition: background-color 0.3s, border-color 0.3s;
+    }
+
+    .btn-success:hover {
+        background-color: #28a745;
+        border-color: #218838;
+    }
+
+    .card-title {
+        font-family: 'Press Start 2P', cursive;
+        font-size: 1.2rem;
+    }
+
+    .blockquote-footer {
+        font-family: 'Press Start 2P', cursive;
+    }
+
+    h2, h3 {
+        font-family: 'Press Start 2P', cursive;
+        color: #2A75BB;
+    }
+
+    .display-4 {
+        font-family: 'Press Start 2P', cursive;
+    }
+
+    @@media (max-width: 767.98px) {
+        .jumbotron h1 {
+            font-size: 2rem;
+        }
+
+        .jumbotron p {
+            font-size: 1rem;
+        }
+
+        .btn-lg {
+            width: 100%;
+            font-size: 0.9rem;
+        }
+
+        .card-title {
+            font-size: 1rem;
+        }
+
+        .blockquote p {
+            font-size: 0.9rem;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+        }
+
+        h3 {
+            font-size: 1.2rem;
+        }
+    }
+</style>

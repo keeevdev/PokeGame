@@ -1,0 +1,171 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\keevd\\OneDrive\\Documents\\Cuatrimestre#6\\Programacion Avanzada\\PokemonGame\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DCF560F4-7577-486B-9DE6-B0B784E0501D}|PokemonGame.MVC\\PokemonGame.MVC.csproj|c:\\users\\keevd\\onedrive\\documents\\cuatrimestre#6\\programacion avanzada\\pokemongame\\pokemongame.mvc\\views\\battle\\battle.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DCF560F4-7577-486B-9DE6-B0B784E0501D}|PokemonGame.MVC\\PokemonGame.MVC.csproj|solutionrelative:pokemongame.mvc\\views\\battle\\battle.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DCF560F4-7577-486B-9DE6-B0B784E0501D}|PokemonGame.MVC\\PokemonGame.MVC.csproj|c:\\users\\keevd\\onedrive\\documents\\cuatrimestre#6\\programacion avanzada\\pokemongame\\pokemongame.mvc\\views\\battle\\endbattle.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DCF560F4-7577-486B-9DE6-B0B784E0501D}|PokemonGame.MVC\\PokemonGame.MVC.csproj|solutionrelative:pokemongame.mvc\\views\\battle\\endbattle.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DCF560F4-7577-486B-9DE6-B0B784E0501D}|PokemonGame.MVC\\PokemonGame.MVC.csproj|c:\\users\\keevd\\onedrive\\documents\\cuatrimestre#6\\programacion avanzada\\pokemongame\\pokemongame.mvc\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DCF560F4-7577-486B-9DE6-B0B784E0501D}|PokemonGame.MVC\\PokemonGame.MVC.csproj|solutionrelative:pokemongame.mvc\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 224,
+          "SelectedChildIndex": 25,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{809f6ff3-8092-454a-8003-6d4091f9b5bb}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{809f6ff3-8092-454a-8003-6d4091f9b5bb}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:15:0:{2456bd12-ecf7-4988-a4a6-67d49173f565}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:18:0:{2456bd12-ecf7-4988-a4a6-67d49173f565}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:19:0:{2456bd12-ecf7-4988-a4a6-67d49173f565}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:20:0:{2456bd12-ecf7-4988-a4a6-67d49173f565}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:21:0:{2456bd12-ecf7-4988-a4a6-67d49173f565}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:22:0:{2456bd12-ecf7-4988-a4a6-67d49173f565}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:23:0:{2456bd12-ecf7-4988-a4a6-67d49173f565}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:24:0:{2456bd12-ecf7-4988-a4a6-67d49173f565}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:25:0:{2456bd12-ecf7-4988-a4a6-67d49173f565}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:26:0:{2456bd12-ecf7-4988-a4a6-67d49173f565}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:27:0:{2456bd12-ecf7-4988-a4a6-67d49173f565}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:28:0:{2456bd12-ecf7-4988-a4a6-67d49173f565}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{131369f2-062d-44a2-8671-91ff31efb4f4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:13:0:{2456bd12-ecf7-4988-a4a6-67d49173f565}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:16:0:{2456bd12-ecf7-4988-a4a6-67d49173f565}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:17:0:{2456bd12-ecf7-4988-a4a6-67d49173f565}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:14:0:{2456bd12-ecf7-4988-a4a6-67d49173f565}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:11:0:{2456bd12-ecf7-4988-a4a6-67d49173f565}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:12:0:{2456bd12-ecf7-4988-a4a6-67d49173f565}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Battle.cshtml",
+              "DocumentMoniker": "C:\\Users\\keevd\\OneDrive\\Documents\\Cuatrimestre#6\\Programacion Avanzada\\PokemonGame\\PokemonGame.MVC\\Views\\Battle\\Battle.cshtml",
+              "RelativeDocumentMoniker": "PokemonGame.MVC\\Views\\Battle\\Battle.cshtml",
+              "ToolTip": "C:\\Users\\keevd\\OneDrive\\Documents\\Cuatrimestre#6\\Programacion Avanzada\\PokemonGame\\PokemonGame.MVC\\Views\\Battle\\Battle.cshtml",
+              "RelativeToolTip": "PokemonGame.MVC\\Views\\Battle\\Battle.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-16T00:55:11.811Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "EndBattle.cshtml",
+              "DocumentMoniker": "C:\\Users\\keevd\\OneDrive\\Documents\\Cuatrimestre#6\\Programacion Avanzada\\PokemonGame\\PokemonGame.MVC\\Views\\Battle\\EndBattle.cshtml",
+              "RelativeDocumentMoniker": "PokemonGame.MVC\\Views\\Battle\\EndBattle.cshtml",
+              "ToolTip": "C:\\Users\\keevd\\OneDrive\\Documents\\Cuatrimestre#6\\Programacion Avanzada\\PokemonGame\\PokemonGame.MVC\\Views\\Battle\\EndBattle.cshtml",
+              "RelativeToolTip": "PokemonGame.MVC\\Views\\Battle\\EndBattle.cshtml",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-16T00:55:02.49Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\keevd\\OneDrive\\Documents\\Cuatrimestre#6\\Programacion Avanzada\\PokemonGame\\PokemonGame.MVC\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "PokemonGame.MVC\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\keevd\\OneDrive\\Documents\\Cuatrimestre#6\\Programacion Avanzada\\PokemonGame\\PokemonGame.MVC\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "PokemonGame.MVC\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAClAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-16T00:51:33.161Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

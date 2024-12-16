@@ -1,0 +1,25 @@
+﻿@{
+    var rol = Session["Rol"] as string;
+    var nombreUsuario = Session["NombreUsuario"] as string;
+}
+
+<ul class="navbar-nav ml-auto">
+    @if (!string.IsNullOrEmpty(rol))
+    {
+        <li class="nav-item">
+            <span class="navbar-text">Hola, @nombreUsuario (@rol)</span>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="@Url.Action("Logout", "Account")">Logout</a>
+        </li>
+    }
+    else
+    {
+        <li class="nav-item">
+            <a class="nav-link" href="@Url.Action("Login", "Account")">Login</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="@Url.Action("Register", "Account")">Register</a>
+        </li>
+    }
+</ul>

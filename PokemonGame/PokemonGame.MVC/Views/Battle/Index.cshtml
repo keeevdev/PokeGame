@@ -1,0 +1,128 @@
+﻿@{
+    ViewBag.Title = "Seleccionar Pokémon para Batalla";
+    var pokemonList = ViewBag.PokemonList as List<string>;
+}
+
+<div class="batalla-container d-flex justify-content-center align-items-center vh-100">
+    <div class="batalla-form p-5 shadow-lg rounded" style="background-color: #f8f9fa; max-width: 600px; width: 100%;">
+        <div class="text-center mb-4">
+            <img src="https://raw.githubusercontent.com/PokeAPI/media/master/logo/pokeapi_256.png" alt="PokemonGame" style="height: 80px;" />
+            <h2 class="mt-2" style="color: #2A75BB; font-family: 'Press Start 2P', cursive;">Selecciona los Pokémon para la Batalla</h2>
+        </div>
+        <form method="post" action="/Battle/StartBattle">
+            <div class="form-group mb-4">
+                <label for="pokemon1Name" class="control-label">Pokémon 1:</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text bg-warning text-white">
+                            <i class="fas fa-paw"></i>
+                        </span>
+                    </div>
+                    <select id="pokemon1Name" name="pokemon1Name" class="form-control" required>
+                        <option value="">Selecciona un Pokémon</option>
+                        @foreach (var pokemon in pokemonList)
+                        {
+                            <option value="@pokemon">@pokemon</option>
+                        }
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group mb-4">
+                <label for="pokemon2Name" class="control-label">Pokémon 2:</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text bg-warning text-white">
+                            <i class="fas fa-paw"></i>
+                        </span>
+                    </div>
+                    <select id="pokemon2Name" name="pokemon2Name" class="form-control" required>
+                        <option value="">Selecciona un Pokémon</option>
+                        @foreach (var pokemon in pokemonList)
+                        {
+                            <option value="@pokemon">@pokemon</option>
+                        }
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group mb-4">
+                <label for="isAI" class="control-label">¿Jugador 2 es IA?</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text bg-warning text-white">
+                            <i class="fas fa-robot"></i>
+                        </span>
+                    </div>
+                    <select id="isAI" name="isAI" class="form-control">
+                        <option value="true">Sí</option>
+                        <option value="false">No</option>
+                    </select>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-warning btn-block text-white font-weight-bold">
+                <i class="fas fa-bolt"></i> ¡Iniciar Batalla!
+            </button>
+        </form>
+    </div>
+</div>
+
+<style>
+    .batalla-container {
+        background-color: #f0f0f0;
+        padding: 20px;
+    }
+
+    .batalla-form {
+        border: 2px solid #2A75BB;
+    }
+
+    .input-group-text {
+        border: none;
+    }
+
+    .btn-warning {
+        background-color: #FFCB05;
+        border-color: #FFCB05;
+        transition: background-color 0.3s, border-color 0.3s;
+    }
+
+        .btn-warning:hover {
+            background-color: #e0b700;
+            border-color: #e0b700;
+        }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .control-label {
+        font-weight: bold;
+    }
+
+    .btn {
+        padding: 0.75rem;
+        font-size: 1rem;
+    }
+
+    .img-fluid {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .form-group {
+        margin-bottom: 1.5rem;
+    }
+
+    .input-group-text i {
+        width: 1em;
+        text-align: center;
+    }
+</style>
+
+
+
+
+
+

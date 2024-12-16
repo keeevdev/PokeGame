@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PokemonGameDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="EntrenadoresPokemones">
+    <Key>
+      <PropertyRef Name="EntrenadorPokemonId" />
+    </Key>
+    <Property Name="EntrenadorPokemonId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UsuarioId" Type="int" Nullable="false" />
+    <Property Name="PokemonId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Mensajes">
+    <Key>
+      <PropertyRef Name="MensajeId" />
+    </Key>
+    <Property Name="MensajeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Contenido" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="FechaEnvio" Type="datetime" Nullable="false" />
+    <Property Name="EmisorId" Type="int" Nullable="false" />
+    <Property Name="ReceptorId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Pokedex">
+    <Key>
+      <PropertyRef Name="PokedexId" />
+    </Key>
+    <Property Name="PokedexId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="Tipo" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="Debilidad" Type="nvarchar" MaxLength="55" Nullable="false" />
+    <Property Name="Evoluciones" Type="nvarchar" MaxLength="255" />
+    <Property Name="Peso" Type="decimal" Precision="5" Scale="2" />
+    <Property Name="Numero" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Pokemones">
+    <Key>
+      <PropertyRef Name="PokemonId" />
+    </Key>
+    <Property Name="PokemonId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Foto" Type="varbinary(max)" />
+    <Property Name="Tipo" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="Debilidad" Type="nvarchar" MaxLength="110" Nullable="false" />
+    <Property Name="Evoluciones" Type="nvarchar" MaxLength="200" />
+    <Property Name="Peso" Type="decimal" Precision="5" Scale="2" />
+    <Property Name="Numero" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SolicitudesAtencion">
+    <Key>
+      <PropertyRef Name="SolicitudId" />
+    </Key>
+    <Property Name="SolicitudId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UsuarioId" Type="int" Nullable="false" />
+    <Property Name="PokemonId" Type="int" Nullable="false" />
+    <Property Name="FechaSolicitud" Type="datetime" Nullable="false" />
+    <Property Name="Estado" Type="nvarchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Usuarios">
+    <Key>
+      <PropertyRef Name="UsuarioId" />
+    </Key>
+    <Property Name="UsuarioId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NombreUsuario" Type="nvarchar" MaxLength="40" Nullable="false" />
+    <Property Name="ContraseñaHasheada" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="Rol" Type="nvarchar" MaxLength="15" Nullable="false" />
+    <Property Name="Nombre" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Foto" Type="varbinary(max)" />
+  </EntityType>
+  <Association Name="FK__Entrenado__Pokem__70DDC3D8">
+    <End Role="Pokemones" Type="Self.Pokemones" Multiplicity="1" />
+    <End Role="EntrenadoresPokemones" Type="Self.EntrenadoresPokemones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pokemones">
+        <PropertyRef Name="PokemonId" />
+      </Principal>
+      <Dependent Role="EntrenadoresPokemones">
+        <PropertyRef Name="PokemonId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Entrenado__Usuar__6FE99F9F">
+    <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="1" />
+    <End Role="EntrenadoresPokemones" Type="Self.EntrenadoresPokemones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuarios">
+        <PropertyRef Name="UsuarioId" />
+      </Principal>
+      <Dependent Role="EntrenadoresPokemones">
+        <PropertyRef Name="UsuarioId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Mensajes__Emisor__534D60F1">
+    <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="1" />
+    <End Role="Mensajes" Type="Self.Mensajes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuarios">
+        <PropertyRef Name="UsuarioId" />
+      </Principal>
+      <Dependent Role="Mensajes">
+        <PropertyRef Name="EmisorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Mensajes__Recept__5441852A">
+    <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="1" />
+    <End Role="Mensajes" Type="Self.Mensajes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuarios">
+        <PropertyRef Name="UsuarioId" />
+      </Principal>
+      <Dependent Role="Mensajes">
+        <PropertyRef Name="ReceptorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Solicitud__Pokem__5CD6CB2B">
+    <End Role="Pokemones" Type="Self.Pokemones" Multiplicity="1" />
+    <End Role="SolicitudesAtencion" Type="Self.SolicitudesAtencion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pokemones">
+        <PropertyRef Name="PokemonId" />
+      </Principal>
+      <Dependent Role="SolicitudesAtencion">
+        <PropertyRef Name="PokemonId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Solicitud__Usuar__5BE2A6F2">
+    <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="1" />
+    <End Role="SolicitudesAtencion" Type="Self.SolicitudesAtencion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuarios">
+        <PropertyRef Name="UsuarioId" />
+      </Principal>
+      <Dependent Role="SolicitudesAtencion">
+        <PropertyRef Name="UsuarioId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="PokemonGameDBModelStoreContainer">
+    <EntitySet Name="EntrenadoresPokemones" EntityType="Self.EntrenadoresPokemones" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Mensajes" EntityType="Self.Mensajes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Pokedex" EntityType="Self.Pokedex" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Pokemones" EntityType="Self.Pokemones" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SolicitudesAtencion" EntityType="Self.SolicitudesAtencion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Usuarios" EntityType="Self.Usuarios" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__Entrenado__Pokem__70DDC3D8" Association="Self.FK__Entrenado__Pokem__70DDC3D8">
+      <End Role="Pokemones" EntitySet="Pokemones" />
+      <End Role="EntrenadoresPokemones" EntitySet="EntrenadoresPokemones" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Entrenado__Usuar__6FE99F9F" Association="Self.FK__Entrenado__Usuar__6FE99F9F">
+      <End Role="Usuarios" EntitySet="Usuarios" />
+      <End Role="EntrenadoresPokemones" EntitySet="EntrenadoresPokemones" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Mensajes__Emisor__534D60F1" Association="Self.FK__Mensajes__Emisor__534D60F1">
+      <End Role="Usuarios" EntitySet="Usuarios" />
+      <End Role="Mensajes" EntitySet="Mensajes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Mensajes__Recept__5441852A" Association="Self.FK__Mensajes__Recept__5441852A">
+      <End Role="Usuarios" EntitySet="Usuarios" />
+      <End Role="Mensajes" EntitySet="Mensajes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Solicitud__Pokem__5CD6CB2B" Association="Self.FK__Solicitud__Pokem__5CD6CB2B">
+      <End Role="Pokemones" EntitySet="Pokemones" />
+      <End Role="SolicitudesAtencion" EntitySet="SolicitudesAtencion" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Solicitud__Usuar__5BE2A6F2" Association="Self.FK__Solicitud__Usuar__5BE2A6F2">
+      <End Role="Usuarios" EntitySet="Usuarios" />
+      <End Role="SolicitudesAtencion" EntitySet="SolicitudesAtencion" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

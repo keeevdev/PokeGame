@@ -1,0 +1,179 @@
+﻿<script src="/Scripts/battle.js"></script>
+
+<div class="battle-container container my-5">
+    <h2 class="text-center mb-5" style="color: #2A75BB; font-family: 'Press Start 2P', cursive;">¡Batalla Pokémon!</h2>
+
+    <div class="battle-arena d-flex flex-column flex-md-row justify-content-center align-items-center mb-5">
+        <div class="pokemon player1 text-center mb-4 mb-md-0 mx-md-3">
+            <h3>@Model.Player1.Name</h3>
+            <img src="@Model.Player1.SpriteUrl" alt="@Model.Player1.Name" class="sprite player1-sprite mb-3" />
+            <div class="hp-bar bg-dark rounded-pill mb-2" style="width: 200px; height: 25px;">
+                <div class="hp bg-success rounded-pill" style="width:@Model.Player1.Hp%; height: 100%;"></div>
+            </div>
+            <p>HP: @Model.Player1.Hp</p>
+        </div>
+
+        <div class="versus text-center mx-md-3 my-4 my-md-0">
+            <h3>VS</h3>
+        </div>
+
+        <div class="pokemon player2 text-center mx-md-3">
+            <h3>@Model.Player2.Name</h3>
+            <img src="@Model.Player2.SpriteUrl" alt="@Model.Player2.Name" class="sprite player2-sprite mb-3" />
+            <div class="hp-bar bg-dark rounded-pill mb-2" style="width: 200px; height: 25px;">
+                <div class="hp bg-danger rounded-pill" style="width:@Model.Player2.Hp%; height: 100%;"></div>
+            </div>
+            <p>HP: @Model.Player2.Hp</p>
+        </div>
+    </div>
+
+    <div class="battle-log mb-5">
+        <h3 class="mb-3">Registro de Batalla</h3>
+        <div class="log-content p-3 bg-light border rounded" style="height: 200px; overflow-y: auto;">
+            @if (ViewBag.Log != null)
+            {
+                <p>@ViewBag.Log</p>
+            }
+            else
+            {
+                <p>¡La batalla comienza!</p>
+            }
+        </div>
+    </div>
+
+    @if (Model.Player1Turn)
+    {
+        <div class="attack-form mb-5">
+            <form method="post" action="/Battle/Attack" class="d-flex flex-column align-items-center">
+                <label for="moveName" class="font-weight-bold mb-2">Selecciona un ataque:</label>
+                <select name="moveName" id="moveName" class="form-control mb-3 w-50" required>
+                    <option value="">Selecciona un ataque</option>
+                    @foreach (var move in Model.Player1.Moves)
+                    {
+                        <option value="@move.Name">@move.Name</option>
+                    }
+                </select>
+                <button type="submit" class="btn btn-warning text-white font-weight-bold w-50"
+                        onclick="animateAttack('.player1-sprite', '.player2-sprite', @ViewBag.IsCritical == true ? 'critical-hit' : 'attack')">
+                    <i class="fas fa-paper-plane"></i> ¡Atacar!
+                </button>
+            </form>
+        </div>
+    }
+    else if (!Model.Player2.IsAI)
+    {
+        <div class="attack-form mb-5">
+            <form method="post" action="/Battle/Attack" class="d-flex flex-column align-items-center">
+                <label for="moveName" class="font-weight-bold mb-2">Selecciona un ataque:</label>
+                <select name="moveName" id="moveName" class="form-control mb-3 w-50" required>
+                    <option value="">Selecciona un ataque</option>
+                    @foreach (var move in Model.Player2.Moves)
+                    {
+                        <option value="@move.Name">@move.Name</option>
+                    }
+                </select>
+                <button type="submit" class="btn btn-warning text-white font-weight-bold w-50"
+                        onclick="animateAttack('.player2-sprite', '.player1-sprite', @ViewBag.IsCritical == true ? 'critical-hit' : 'attack')">
+                    <i class="fas fa-paper-plane"></i> ¡Atacar!
+                </button>
+            </form>
+        </div>
+    }
+    else
+    {
+        <div class="text-center">
+            <p class="font-italic">Turno de la IA...</p>
+        </div>
+    }
+</div>
+
+<style>
+    .battle-container {
+        background-color: #f8f9fa;
+        padding: 20px;
+    }
+
+    .battle-arena {
+        gap: 2rem;
+    }
+
+    .pokemon h3 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .sprite {
+        width: 150px;
+        height: 150px;
+    }
+
+    .hp-bar {
+        position: relative;
+    }
+
+    .hp {
+        transition: width 0.5s ease-in-out;
+    }
+
+    .battle-log .log-content {
+        background-color: #ffffff;
+    }
+
+    .attack-form label {
+        width: 100%;
+        text-align: center;
+    }
+
+    .attack-form select {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .attack-form button {
+        width: 100%;
+        max-width: 200px;
+    }
+
+    @@media (max-width: 767.98px) {
+        .battle-arena {
+            flex-direction: column;
+        }
+
+        .hp-bar {
+            width: 100%;
+        }
+
+        .sprite {
+            width: 120px;
+            height: 120px;
+        }
+
+        .battle-log .log-content {
+            height: 150px;
+        }
+    }
+
+    .form-group {
+        margin-bottom: 1.5rem;
+    }
+
+    .battle-log {
+        margin-bottom: 2rem;
+    }
+
+    .attack-form {
+        margin-bottom: 2rem;
+    }
+
+    .versus h3 {
+        font-size: 2rem;
+        color: #FFCB05;
+    }
+</style>
+
+
+
+
+
+
+

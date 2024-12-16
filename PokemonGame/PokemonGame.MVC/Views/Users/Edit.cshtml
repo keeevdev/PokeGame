@@ -1,0 +1,26 @@
+﻿@using PokemonGame.Data.Model
+@model Usuario
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Editar Usuario</h2>
+@using (Html.BeginForm("Edit", "Users", FormMethod.Post))
+{
+    @Html.HiddenFor(m => m.UsuarioId)
+    <div class="form-group">
+        @Html.LabelFor(m => m.NombreUsuario)
+        @Html.TextBoxFor(m => m.NombreUsuario, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Rol)
+        @Html.TextBoxFor(m => m.Rol, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Nombre)
+        @Html.TextBoxFor(m => m.Nombre, new { @class = "form-control" })
+    </div>
+    <button class="btn btn-warning">Guardar Cambios</button>
+    <a class="btn btn-secondary" href="@Url.Action("Index")">Cancelar</a>
+}
+

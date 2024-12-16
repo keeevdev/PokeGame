@@ -1,0 +1,110 @@
+﻿@model PokemonGame.MVC.Models.ViewModels.LoginViewModel
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="login-container d-flex justify-content-center align-items-center vh-100">
+    <div class="login-form p-5 shadow-lg rounded" style="background-color: #f8f9fa; max-width: 400px; width: 100%;">
+        <div class="text-center mb-4">
+            <img src="https://raw.githubusercontent.com/PokeAPI/media/master/logo/pokeapi_256.png" alt="PokemonGame" style="height: 80px;" />
+            <h2 class="mt-2" style="color: #2A75BB; font-family: 'Press Start 2P', cursive;">Inicia Sesión</h2>
+        </div>
+        @using (Html.BeginForm("Login", "Account", FormMethod.Post, new { @class = "needs-validation", novalidate = "novalidate" }))
+        {
+            <div class="form-group mb-4">
+                @Html.LabelFor(m => m.NombreUsuario, htmlAttributes: new { @class = "control-label" })
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text bg-warning text-white">
+                            <i class="fas fa-user"></i>
+                        </span>
+                    </div>
+                    @Html.TextBoxFor(m => m.NombreUsuario, new { @class = "form-control", placeholder = "Nombre de Usuario", required = "required" })
+                </div>
+                @Html.ValidationMessageFor(m => m.NombreUsuario, "", new { @class = "text-danger mt-1" })
+            </div>
+            <div class="form-group mb-4">
+                @Html.LabelFor(m => m.Password, htmlAttributes: new { @class = "control-label" })
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text bg-warning text-white">
+                            <i class="fas fa-lock"></i>
+                        </span>
+                    </div>
+                    @Html.PasswordFor(m => m.Password, new { @class = "form-control", placeholder = "Contraseña", required = "required" })
+                </div>
+                @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger mt-1" })
+            </div>
+            <button type="submit" class="btn btn-warning btn-block text-white font-weight-bold">
+                <i class="fas fa-sign-in-alt"></i> Iniciar Sesión
+            </button>
+        }
+        <div class="text-center mt-3">
+            <a href="@Url.Action("Register", "Account")" class="text-primary">¿No tienes una cuenta? Regístrate</a>
+        </div>
+    </div>
+</div>
+
+<style>
+    .login-container {
+        background-color: #f0f0f0;
+        padding: 20px;
+    }
+
+    .login-form {
+        border: 2px solid #2A75BB;
+    }
+
+    .input-group-text {
+        border: none;
+    }
+
+    .btn-warning {
+        background-color: #FFCB05;
+        border-color: #FFCB05;
+        transition: background-color 0.3s, border-color 0.3s;
+    }
+
+    .btn-warning:hover {
+        background-color: #e0b700;
+        border-color: #e0b700;
+    }
+
+    @@media (max-width: 576px) {
+        .login-form {
+            padding: 2rem;
+        }
+
+        .login-form img {
+            height: 60px;
+        }
+
+        .login-form h2 {
+            font-size: 1rem;
+        }
+
+        .btn-warning {
+            font-size: 0.9rem;
+        }
+    }
+
+    .form-group {
+    }
+
+    .input-group-text i {
+        font-size: 1rem;
+    }
+
+    .btn {
+        font-size: 1rem;
+    }
+</style>
+
+
+
+
+
+
+
+
+

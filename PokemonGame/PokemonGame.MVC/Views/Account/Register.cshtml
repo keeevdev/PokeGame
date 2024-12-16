@@ -1,0 +1,107 @@
+﻿@model PokemonGame.MVC.Models.ViewModels.RegisterViewModel
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="register-container d-flex justify-content-center align-items-center vh-100">
+    <div class="register-form p-5 shadow-lg rounded" style="background-color: #f8f9fa; max-width: 500px; width: 100%;">
+        <div class="text-center mb-4">
+            <img src="https://raw.githubusercontent.com/PokeAPI/media/master/logo/pokeapi_256.png" alt="PokemonGame" style="height: 80px;" />
+            <h2 class="mt-2" style="color: #2A75BB; font-family: 'Press Start 2P', cursive;">Registro</h2>
+        </div>
+        @using (Html.BeginForm("Register", "Account", FormMethod.Post))
+        {
+            <div class="form-group mb-4">
+                @Html.LabelFor(m => m.NombreUsuario, htmlAttributes: new { @class = "control-label" })
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text bg-warning text-white">
+                            <i class="fas fa-user"></i>
+                        </span>
+                    </div>
+                    @Html.TextBoxFor(m => m.NombreUsuario, new { @class = "form-control", placeholder = "Nombre de Usuario" })
+                </div>
+                @Html.ValidationMessageFor(m => m.NombreUsuario, "", new { @class = "text-danger" })
+            </div>
+            <div class="form-group mb-4">
+                @Html.LabelFor(m => m.Nombre, htmlAttributes: new { @class = "control-label" })
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text bg-warning text-white">
+                            <i class="fas fa-id-badge"></i>
+                        </span>
+                    </div>
+                    @Html.TextBoxFor(m => m.Nombre, new { @class = "form-control", placeholder = "Nombre Completo" })
+                </div>
+                @Html.ValidationMessageFor(m => m.Nombre, "", new { @class = "text-danger" })
+            </div>
+            <div class="form-group mb-4">
+                @Html.LabelFor(m => m.Rol, htmlAttributes: new { @class = "control-label" })
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text bg-warning text-white">
+                            <i class="fas fa-user-tag"></i>
+                        </span>
+                    </div>
+                    @Html.TextBoxFor(m => m.Rol, new { @class = "form-control", placeholder = "Entrenador, Administrador o Enfermera" })
+                </div>
+                @Html.ValidationMessageFor(m => m.Rol, "", new { @class = "text-danger" })
+            </div>
+            <div class="form-group mb-4">
+                @Html.LabelFor(m => m.Password, htmlAttributes: new { @class = "control-label" })
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text bg-warning text-white">
+                            <i class="fas fa-lock"></i>
+                        </span>
+                    </div>
+                    @Html.PasswordFor(m => m.Password, new { @class = "form-control", placeholder = "Contraseña" })
+                </div>
+                @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+            </div>
+
+            <button type="submit" class="btn btn-warning btn-block text-white font-weight-bold">
+                <i class="fas fa-user-plus"></i> Registrarse
+            </button>
+        }
+        <div class="text-center mt-3">
+            <a href="@Url.Action("Login", "Account")" class="text-primary">¿Ya tienes una cuenta? Inicia Sesión</a>
+        </div>
+    </div>
+</div>
+
+<style>
+    .register-container {
+        background-color: #f0f0f0;
+        padding: 20px;
+    }
+
+    .register-form {
+        border: 2px solid #2A75BB;
+    }
+
+    .input-group-text {
+        border: none;
+    }
+
+    .btn-warning {
+        background-color: #FFCB05;
+        border-color: #FFCB05;
+    }
+
+        .btn-warning:hover {
+            background-color: #e0b700;
+            border-color: #e0b700;
+        }
+
+</style>
+
+
+
+
+
+
+
+
+
+

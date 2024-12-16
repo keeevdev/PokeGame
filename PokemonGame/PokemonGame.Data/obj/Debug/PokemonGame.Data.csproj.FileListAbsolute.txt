@@ -1,0 +1,12 @@
+C:\Users\keevd\OneDrive\Documents\Cuatrimestre#6\Programacion Avanzada\PokemonGame\PokemonGame.Data\bin\Debug\PokemonGame.Data.dll.config
+C:\Users\keevd\OneDrive\Documents\Cuatrimestre#6\Programacion Avanzada\PokemonGame\PokemonGame.Data\bin\Debug\PokemonGame.Data.dll
+C:\Users\keevd\OneDrive\Documents\Cuatrimestre#6\Programacion Avanzada\PokemonGame\PokemonGame.Data\bin\Debug\PokemonGame.Data.pdb
+C:\Users\keevd\OneDrive\Documents\Cuatrimestre#6\Programacion Avanzada\PokemonGame\PokemonGame.Data\bin\Debug\EntityFramework.dll
+C:\Users\keevd\OneDrive\Documents\Cuatrimestre#6\Programacion Avanzada\PokemonGame\PokemonGame.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\keevd\OneDrive\Documents\Cuatrimestre#6\Programacion Avanzada\PokemonGame\PokemonGame.Data\bin\Debug\EntityFramework.xml
+C:\Users\keevd\OneDrive\Documents\Cuatrimestre#6\Programacion Avanzada\PokemonGame\PokemonGame.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\keevd\OneDrive\Documents\Cuatrimestre#6\Programacion Avanzada\PokemonGame\PokemonGame.Data\obj\Debug\PokemonGame.Data.csproj.AssemblyReference.cache
+C:\Users\keevd\OneDrive\Documents\Cuatrimestre#6\Programacion Avanzada\PokemonGame\PokemonGame.Data\obj\Debug\PokemonGame.Data.csproj.CoreCompileInputs.cache
+C:\Users\keevd\OneDrive\Documents\Cuatrimestre#6\Programacion Avanzada\PokemonGame\PokemonGame.Data\obj\Debug\PokemonG.66D51D0A.Up2Date
+C:\Users\keevd\OneDrive\Documents\Cuatrimestre#6\Programacion Avanzada\PokemonGame\PokemonGame.Data\obj\Debug\PokemonGame.Data.dll
+C:\Users\keevd\OneDrive\Documents\Cuatrimestre#6\Programacion Avanzada\PokemonGame\PokemonGame.Data\obj\Debug\PokemonGame.Data.pdb

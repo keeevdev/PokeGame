@@ -1,0 +1,84 @@
+﻿@using PokemonGame.Data.Model
+@model Pokedex
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="details-pokedex-container container my-5">
+    <div class="card shadow-lg rounded bg-light">
+        <div class="card-header bg-primary text-white">
+            <h2 class="mb-0" style="font-family: 'Press Start 2P', cursive;">Detalles de @Model.Nombre</h2>
+        </div>
+        <div class="card-body">
+            <dl class="row">
+                <dt class="col-sm-3">Tipo:</dt>
+                <dd class="col-sm-9">@Model.Tipo</dd>
+
+                <dt class="col-sm-3">Debilidad:</dt>
+                <dd class="col-sm-9">@Model.Debilidad</dd>
+
+                <dt class="col-sm-3">Evoluciones:</dt>
+                <dd class="col-sm-9">@Model.Evoluciones</dd>
+
+                <dt class="col-sm-3">Peso:</dt>
+                <dd class="col-sm-9">@Model.Peso kg</dd>
+
+                <dt class="col-sm-3">Número:</dt>
+                <dd class="col-sm-9">@Model.Numero</dd>
+            </dl>
+            <div class="text-center mt-4">
+                <a class="btn btn-warning btn-lg" href="@Url.Action("Index")">
+                    <i class="fas fa-arrow-left"></i> Volver
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .details-pokedex-container {
+        background-color: #f8f9fa;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .card-header h2 {
+        font-size: 1.8rem;
+    }
+
+    dl dt {
+        font-weight: bold;
+        color: #2A75BB;
+    }
+
+    dl dd {
+        color: #555555;
+    }
+
+    .btn-warning {
+        background-color: #FFCB05;
+        border-color: #FFCB05;
+        font-family: 'Press Start 2P', cursive;
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+
+    .btn-warning:hover {
+        background-color: #e0b700;
+        border-color: #e0b700;
+    }
+
+    @@media (max-width: 576px) {
+        .card-header h2 {
+            font-size: 1.4rem;
+        }
+
+        .btn-warning {
+            width: 100%;
+            font-size: 0.9rem;
+        }
+    }
+</style>
+
+

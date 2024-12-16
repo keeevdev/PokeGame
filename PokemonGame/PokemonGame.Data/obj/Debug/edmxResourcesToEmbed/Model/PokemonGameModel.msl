@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PokemonGameDBModelStoreContainer" CdmEntityContainer="PokemonGameDBEntities">
+    <EntitySetMapping Name="EntrenadoresPokemones">
+      <EntityTypeMapping TypeName="PokemonGameDBModel.EntrenadoresPokemone">
+        <MappingFragment StoreEntitySet="EntrenadoresPokemones">
+          <ScalarProperty Name="EntrenadorPokemonId" ColumnName="EntrenadorPokemonId" />
+          <ScalarProperty Name="UsuarioId" ColumnName="UsuarioId" />
+          <ScalarProperty Name="PokemonId" ColumnName="PokemonId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Mensajes">
+      <EntityTypeMapping TypeName="PokemonGameDBModel.Mensaje">
+        <MappingFragment StoreEntitySet="Mensajes">
+          <ScalarProperty Name="MensajeId" ColumnName="MensajeId" />
+          <ScalarProperty Name="Contenido" ColumnName="Contenido" />
+          <ScalarProperty Name="FechaEnvio" ColumnName="FechaEnvio" />
+          <ScalarProperty Name="EmisorId" ColumnName="EmisorId" />
+          <ScalarProperty Name="ReceptorId" ColumnName="ReceptorId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pokedexes">
+      <EntityTypeMapping TypeName="PokemonGameDBModel.Pokedex">
+        <MappingFragment StoreEntitySet="Pokedex">
+          <ScalarProperty Name="PokedexId" ColumnName="PokedexId" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+          <ScalarProperty Name="Debilidad" ColumnName="Debilidad" />
+          <ScalarProperty Name="Evoluciones" ColumnName="Evoluciones" />
+          <ScalarProperty Name="Peso" ColumnName="Peso" />
+          <ScalarProperty Name="Numero" ColumnName="Numero" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pokemones">
+      <EntityTypeMapping TypeName="PokemonGameDBModel.Pokemone">
+        <MappingFragment StoreEntitySet="Pokemones">
+          <ScalarProperty Name="PokemonId" ColumnName="PokemonId" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Foto" ColumnName="Foto" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+          <ScalarProperty Name="Debilidad" ColumnName="Debilidad" />
+          <ScalarProperty Name="Evoluciones" ColumnName="Evoluciones" />
+          <ScalarProperty Name="Peso" ColumnName="Peso" />
+          <ScalarProperty Name="Numero" ColumnName="Numero" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SolicitudesAtencions">
+      <EntityTypeMapping TypeName="PokemonGameDBModel.SolicitudesAtencion">
+        <MappingFragment StoreEntitySet="SolicitudesAtencion">
+          <ScalarProperty Name="SolicitudId" ColumnName="SolicitudId" />
+          <ScalarProperty Name="UsuarioId" ColumnName="UsuarioId" />
+          <ScalarProperty Name="PokemonId" ColumnName="PokemonId" />
+          <ScalarProperty Name="FechaSolicitud" ColumnName="FechaSolicitud" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usuarios">
+      <EntityTypeMapping TypeName="PokemonGameDBModel.Usuario">
+        <MappingFragment StoreEntitySet="Usuarios">
+          <ScalarProperty Name="UsuarioId" ColumnName="UsuarioId" />
+          <ScalarProperty Name="NombreUsuario" ColumnName="NombreUsuario" />
+          <ScalarProperty Name="ContraseñaHasheada" ColumnName="ContraseñaHasheada" />
+          <ScalarProperty Name="Rol" ColumnName="Rol" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Foto" ColumnName="Foto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
