@@ -31,4 +31,4 @@
 
 1. **Clonar el Repositorio**
    ```bash
-   git clone https://github.com/tu-usuario/pokemon-web.git](https://github.com/keeevdev/PokeGame.git)
+   git clone https://github.com/keeevdev/PokeGame.git
